@@ -1,0 +1,12 @@
+{
+    "caseCode": "Court Complex",
+    "courtType": "Nagpur, District Sessions Court III",
+    "searchBy": "Advocate",
+    "advocate": "Will",
+    "state": "11",
+    "barcode": "123",
+    "year": "2015",
+    "status": "Both",
+    "calendar": "03-11-2022",
+    "recordsReturned": "1",
+}

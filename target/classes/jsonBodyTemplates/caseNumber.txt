@@ -1,0 +1,8 @@
+{
+    "caseCode": "Court Complex",
+    "courtType": "Nagpur, District Sessions Court III",
+    "caseType": "M.A.C.P.",
+    "caseYear": "2015",
+    "recordsReturned": "1",
+    "caseNo": "114"
+}

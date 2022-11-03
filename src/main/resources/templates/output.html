@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Output</title>
+<style type="text/css">
+	span {
+		display: inline-block;
+		width: 200px;
+		text-align: left;
+	}
+</style>
+</head>
+<body>
+	<div align="center">
+		<h2><span th:text="${response.success}"></span></h2>
+		<span>URL:</span><span th:text="${response.url}"></span><br/>
+		<span>Response:</span><span th:text="${response.response}"></span><br/>
+		<span>JSON Dump:</span><span th:text="${response.json}"></span><br/>
+	</div>
+	<div align="center">
+		<a href="/">Click here to Restart</a>
+	</div>
+</body>
+</html>
