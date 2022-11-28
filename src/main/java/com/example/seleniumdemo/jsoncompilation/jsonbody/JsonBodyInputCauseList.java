@@ -4,7 +4,7 @@ import org.apache.commons.lang3.math.NumberUtils;
 
 import javax.validation.constraints.NotNull;
 
-public class JsonBodyInputCaseNumber {
+public class JsonBodyInputCauseList {
     @NotNull
     private String state_val;
     @NotNull
@@ -14,11 +14,11 @@ public class JsonBodyInputCaseNumber {
     @NotNull
     private String bench_val;
     @NotNull
-    private String ct;
+    private String court;
     @NotNull
-    private String cn;
+    private String causeDate;
     @NotNull
-    private String cy;
+    private String caseType;
     @NotNull
     private String recordsReturned;
     @NotNull
@@ -56,28 +56,28 @@ public class JsonBodyInputCaseNumber {
         this.bench_val = bench_val;
     }
 
-    public String getCt() {
-        return ct;
+    public String getCourt() {
+        return court;
     }
 
-    public void setCt(String ct) {
-        this.ct = ct;
+    public void setCourt(String court) {
+        this.court = court;
     }
 
-    public String getCn() {
-        return cn;
+    public String getCauseDate() {
+        return causeDate;
     }
 
-    public void setCn(String cn) {
-        this.cn = cn;
+    public void setCauseDate(String causeDate) {
+        this.causeDate = causeDate;
     }
 
-    public String getCy() {
-        return cy;
+    public String getCaseType() {
+        return caseType;
     }
 
-    public void setCy(String cy) {
-        this.cy = cy;
+    public void setCaseType(String caseType) {
+        this.caseType = caseType;
     }
 
     public int getRecordsReturned() {

@@ -3,8 +3,8 @@
     "district_val": "6",
     "courtComplexEstb": "0",
     "bench_val": "1010122@1,3,4,5,8@N",
-    "ct": "12",
-    "cn": "114",
-    "cy": "2015",
+    "court": "1",
+    "causeDate": "8-11-2022",
+    "caseType": "civil",
     "recordsReturned": "1"
 }

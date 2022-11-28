@@ -185,8 +185,8 @@ public class FetchData extends base {
 			if(counter>=excelData.size())
 				break;
 		} while (itr.hasNext());
-//		 JOptionPane.showConfirmDialog(null, "Records Processed Successfully", "Job Complete",
-//		 JOptionPane.DEFAULT_OPTION);
+		 JOptionPane.showConfirmDialog(null, "Records Processed Successfully", "Job Complete",
+		 JOptionPane.DEFAULT_OPTION);
 	}
 
 	/*

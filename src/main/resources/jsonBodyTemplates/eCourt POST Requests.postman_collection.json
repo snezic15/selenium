@@ -1,0 +1,735 @@
+{
+	"info": {
+		"_postman_id": "80166d98-5e30-44ec-90e5-3bdf66f2dbca",
+		"name": "eCourt POST Requests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Local Execution",
+			"item": [
+				{
+					"name": "Case Number Local",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"state_val\": \"21\",\r\n    \"district_val\": \"6\",\r\n    \"courtComplexEstb\": \"0\",\r\n    \"bench_val\": \"1010122@1,3,4,5,8@N\",\r\n    \"ct\": \"12\",\r\n    \"cn\": \"114\",\r\n    \"cy\": \"2015\",\r\n    \"recordsReturned\": \"1\",\r\n    \"format\": \"0\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/caseNumber",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"caseNumber"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Party Name Local",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"state_val\": \"21\",\r\n    \"district_val\": \"6\",\r\n    \"courtComplexEstb\": \"1\",\r\n    \"bench_val\": \"3\",\r\n    \"name\": \"Will\",\r\n    \"cy\": \"2015\",\r\n    \"f\": \"1\",\r\n    \"recordsReturned\": \"1\",\r\n    \"format\": \"0\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/partyName",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"partyName"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Advocate Name Local",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"state_val\": \"21\",\r\n    \"district_val\": \"6\",\r\n    \"courtComplexEstb\": \"1\",\r\n    \"bench_val\": \"3\",\r\n    \"name\": \"S. B. Padeer\",\r\n    \"f\": \"0\",\r\n    \"recordsReturned\": \"5\",\r\n    \"format\": \"0\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/advocateName",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"advocateName"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cause List Local",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"state_val\": \"21\",\r\n    \"district_val\": \"6\",\r\n    \"courtComplexEstb\": \"1\",\r\n    \"bench_val\": \"3\",\r\n    \"court\": \"3^2\",\r\n    \"causeDate\": \"25-11-2022\",\r\n    \"caseType\": \"0\",\r\n    \"recordsReturned\": \"2\",\r\n    \"format\": \"0\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/causeList",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"causeList"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CNR Number Local",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cino\": \"MHNG020019932010\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/cnrNumber",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cnrNumber"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Local Execution Update",
+			"item": [
+				{
+					"name": "Case Number Local Update",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"state_val\": \"21\",\r\n    \"district_val\": \"6\",\r\n    \"courtComplexEstb\": \"0\",\r\n    \"bench_val\": \"1010122@1,3,4,5,8@N\",\r\n    \"ct\": \"12\",\r\n    \"cn\": \"114\",\r\n    \"cy\": \"2015\",\r\n    \"recordsReturned\": \"1\",\r\n    \"format\": \"0\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/caseNumberUpdate",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"caseNumberUpdate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Party Name Local Update",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"state_val\": \"21\",\r\n    \"district_val\": \"6\",\r\n    \"courtComplexEstb\": \"1\",\r\n    \"bench_val\": \"3\",\r\n    \"name\": \"Will\",\r\n    \"cy\": \"2015\",\r\n    \"f\": \"1\",\r\n    \"recordsReturned\": \"1\",\r\n    \"format\": \"0\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/partyNameUpdate",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"partyNameUpdate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Advocate Name Local Update",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"state_val\": \"21\",\r\n    \"district_val\": \"6\",\r\n    \"courtComplexEstb\": \"1\",\r\n    \"bench_val\": \"3\",\r\n    \"name\": \"S. B. Padeer\",\r\n    \"f\": \"0\",\r\n    \"recordsReturned\": \"5\",\r\n    \"format\": \"0\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/advocateNameUpdate",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"advocateNameUpdate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cause List Local Update",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"state_val\": \"21\",\r\n    \"district_val\": \"6\",\r\n    \"courtComplexEstb\": \"1\",\r\n    \"bench_val\": \"3\",\r\n    \"court\": \"3^2\",\r\n    \"causeDate\": \"25-11-2022\",\r\n    \"caseType\": \"0\",\r\n    \"recordsReturned\": \"2\",\r\n    \"format\": \"0\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/causeListUpdate",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"causeListUpdate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CNR Number Local Update",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cino\": \"MHNG020019932010\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/cnrNumberUpdate",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cnrNumberUpdate"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Local Execution Misc",
+			"item": [
+				{
+					"name": "Advocate Name Local Basic",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"state_val\": \"21\",\r\n    \"district_val\": \"6\",\r\n    \"courtComplexEstb\": \"1\",\r\n    \"bench_val\": \"3\",\r\n    \"name\": \"S. B. Padeer\",\r\n    \"f\": \"0\",\r\n    \"recordsReturned\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/advocateNameBasic",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"advocateNameBasic"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CNR Number Local Basic",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cino\": \"MHNG020019932010\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/cnrNumberBasic",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cnrNumberBasic"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Public Server Execution",
+			"item": [
+				{
+					"name": "Case Number Public",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"state_val\": \"21\",\r\n    \"district_val\": \"6\",\r\n    \"courtComplexEstb\": \"0\",\r\n    \"bench_val\": \"1010122@1,3,4,5,8@N\",\r\n    \"ct\": \"12\",\r\n    \"cn\": \"114\",\r\n    \"cy\": \"2015\",\r\n    \"recordsReturned\": \"1\",\r\n    \"format\": \"0\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://31.220.108.229:8080/caseNumber",
+							"protocol": "http",
+							"host": [
+								"31",
+								"220",
+								"108",
+								"229"
+							],
+							"port": "8080",
+							"path": [
+								"caseNumber"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Party Name Public",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"state_val\": \"21\",\r\n    \"district_val\": \"6\",\r\n    \"courtComplexEstb\": \"1\",\r\n    \"bench_val\": \"3\",\r\n    \"name\": \"Will\",\r\n    \"cy\": \"2015\",\r\n    \"f\": \"1\",\r\n    \"recordsReturned\": \"1\",\r\n    \"format\": \"0\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://31.220.108.229:8080/partyName",
+							"protocol": "http",
+							"host": [
+								"31",
+								"220",
+								"108",
+								"229"
+							],
+							"port": "8080",
+							"path": [
+								"partyName"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Advocate Name Public",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"state_val\": \"21\",\r\n    \"district_val\": \"6\",\r\n    \"courtComplexEstb\": \"1\",\r\n    \"bench_val\": \"3\",\r\n    \"name\": \"S. B. Padeer\",\r\n    \"f\": \"0\",\r\n    \"recordsReturned\": \"\",\r\n    \"format\": \"0\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://31.220.108.229:8080/advocateName",
+							"protocol": "http",
+							"host": [
+								"31",
+								"220",
+								"108",
+								"229"
+							],
+							"port": "8080",
+							"path": [
+								"advocateName"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cause List Public",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"state_val\": \"21\",\r\n    \"district_val\": \"6\",\r\n    \"courtComplexEstb\": \"1\",\r\n    \"bench_val\": \"3\",\r\n    \"court\": \"3^2\",\r\n    \"causeDate\": \"15-11-2022\",\r\n    \"caseType\": \"0\",\r\n    \"recordsReturned\": \"1\",\r\n    \"format\": \"0\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://31.220.108.229:8080/causeList",
+							"protocol": "http",
+							"host": [
+								"31",
+								"220",
+								"108",
+								"229"
+							],
+							"port": "8080",
+							"path": [
+								"causeList"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CNR Number Public",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cino\": \"MHNG020019932010\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://31.220.108.229:8080/cnrNumber",
+							"protocol": "http",
+							"host": [
+								"31",
+								"220",
+								"108",
+								"229"
+							],
+							"port": "8080",
+							"path": [
+								"cnrNumber"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Public Server Execution Update",
+			"item": [
+				{
+					"name": "Case Number Public Update",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"state_val\": \"21\",\r\n    \"district_val\": \"6\",\r\n    \"courtComplexEstb\": \"0\",\r\n    \"bench_val\": \"1010122@1,3,4,5,8@N\",\r\n    \"ct\": \"12\",\r\n    \"cn\": \"114\",\r\n    \"cy\": \"2015\",\r\n    \"recordsReturned\": \"1\",\r\n    \"format\": \"0\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://31.220.108.229:8080/caseNumberUpdate",
+							"protocol": "http",
+							"host": [
+								"31",
+								"220",
+								"108",
+								"229"
+							],
+							"port": "8080",
+							"path": [
+								"caseNumberUpdate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Party Name Public Update",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"state_val\": \"21\",\r\n    \"district_val\": \"6\",\r\n    \"courtComplexEstb\": \"1\",\r\n    \"bench_val\": \"3\",\r\n    \"name\": \"Will\",\r\n    \"cy\": \"2015\",\r\n    \"f\": \"1\",\r\n    \"recordsReturned\": \"1\",\r\n    \"format\": \"0\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://31.220.108.229:8080/partyNameUpdate",
+							"protocol": "http",
+							"host": [
+								"31",
+								"220",
+								"108",
+								"229"
+							],
+							"port": "8080",
+							"path": [
+								"partyNameUpdate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Advocate Name Public Update",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"state_val\": \"21\",\r\n    \"district_val\": \"6\",\r\n    \"courtComplexEstb\": \"1\",\r\n    \"bench_val\": \"3\",\r\n    \"name\": \"S. B. Padeer\",\r\n    \"f\": \"0\",\r\n    \"recordsReturned\": \"2\",\r\n    \"format\": \"0\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://31.220.108.229:8080/advocateNameUpdate",
+							"protocol": "http",
+							"host": [
+								"31",
+								"220",
+								"108",
+								"229"
+							],
+							"port": "8080",
+							"path": [
+								"advocateNameUpdate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cause List Public Update",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"state_val\": \"21\",\r\n    \"district_val\": \"6\",\r\n    \"courtComplexEstb\": \"1\",\r\n    \"bench_val\": \"3\",\r\n    \"court\": \"3^2\",\r\n    \"causeDate\": \"15-11-2022\",\r\n    \"caseType\": \"0\",\r\n    \"recordsReturned\": \"1\",\r\n    \"format\": \"0\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://31.220.108.229:8080/causeListUpdate",
+							"protocol": "http",
+							"host": [
+								"31",
+								"220",
+								"108",
+								"229"
+							],
+							"port": "8080",
+							"path": [
+								"causeListUpdate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CNR Number Public Update",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cino\": \"MHNG020019932010\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://31.220.108.229:8080/cnrNumberUpdate",
+							"protocol": "http",
+							"host": [
+								"31",
+								"220",
+								"108",
+								"229"
+							],
+							"port": "8080",
+							"path": [
+								"cnrNumberUpdate"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Public Server Execution Misc",
+			"item": [
+				{
+					"name": "Advocate Name Public Basic",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"state_val\": \"21\",\r\n    \"district_val\": \"6\",\r\n    \"courtComplexEstb\": \"1\",\r\n    \"bench_val\": \"3\",\r\n    \"name\": \"S. B. Padeer\",\r\n    \"f\": \"0\",\r\n    \"recordsReturned\": \"5\",\r\n    \"format\": \"0\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://31.220.108.229:8080/advocateNameBasic",
+							"protocol": "http",
+							"host": [
+								"31",
+								"220",
+								"108",
+								"229"
+							],
+							"port": "8080",
+							"path": [
+								"advocateNameBasic"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CNR Number Public Basic",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cino\": \"MHNG020019932010\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://31.220.108.229:8080/cnrNumberBasic",
+							"protocol": "http",
+							"host": [
+								"31",
+								"220",
+								"108",
+								"229"
+							],
+							"port": "8080",
+							"path": [
+								"cnrNumberBasic"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

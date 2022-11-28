@@ -159,7 +159,7 @@ public class CaptureData {
 		NatureofDisposal = natureofDisposal;
 	}
 
-	public static void readfromWebpage(WebDriver Driver) {
+	static void readfromWebpage(WebDriver Driver) {
 		reusableTest.captureCaseDetails(Driver);
 		reusableTest.captureCaseStatus(Driver);
 		reusableTest.capturePetitionerandAdvocate(Driver);

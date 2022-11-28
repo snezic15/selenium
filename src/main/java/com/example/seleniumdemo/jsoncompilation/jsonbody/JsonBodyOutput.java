@@ -1,50 +1,59 @@
 package com.example.seleniumdemo.jsoncompilation.jsonbody;
 
 import java.util.ArrayList;
-import java.util.Map;
+import java.util.LinkedHashMap;
 
 public class JsonBodyOutput {
-    private String title;
-    private String listingDate;
-    private String status;
-    private String disposalNature;
-    private String listingStage;
-    private String courtNo;
-    private String petitioners;
-    private String respondents;
-    private String[] padvocates;
-    private String[] radvocates;
-    private ArrayList<Map<String, Object>> orders;
-    //This is case details in excel
-    private ArrayList<Map<String, Object>> listingDates;
-    private String act;
-    private String section;
-    private String[] officeReports;
-    private String courtName;
-    private String cn;
-    private String cy;
-    private String state_val;
-    private String district_val;
-    private String bench_val;
-    private String cino;
-    private String courtID;
-    private String caseTypeStr;
-    private String file_no;
-    private String file_year;
-    private String[] IA;
-    private String[] listingJudges;
-    private String[] judgements;
-    private String[] history;
-    private String[] taggedMatters;
-    private String[] caveats;
-    private String listingDateSource;
-    private String listingRoom;
-    private String caseNoString;
-    private String[] listingAdvocates;
-    private Map<String, Object> listing;
-    private String[] causeLists;
-    private Map<String, Object> statusGroup;
-    private String lastUpdated;
+    private String index = "";
+    private String title = "";
+    private String listingDate = "";
+    private String status = "";
+    private String disposalNature = "";
+    private String listingStage = "";
+    private String courtNo = "";
+    private String[] petitioners = new String[0];
+    private String[] respondents = new String[0];
+    private String[] padvocates = new String[0];
+    private String[] radvocates = new String[0];
+    private ArrayList<LinkedHashMap<String, String>> orders = new ArrayList<>();
+    private ArrayList<LinkedHashMap<String, String>> process = new ArrayList<>();
+    private ArrayList<LinkedHashMap<String, String>> listingDates = new ArrayList<>();
+    private String act = "";
+    private String section = "";
+    private String[] officeReports = new String[0];
+    private String courtName = "";
+    private String cn = "";
+    private String cy = "";
+    private String state_val = "";
+    private String district_val = "";
+    private String bench_val = "";
+    private String cino = "";
+    private String courtID = "";
+    private String caseTypeStr = "";
+    private String file_no = "";
+    private String file_year = "";
+    private ArrayList<LinkedHashMap<String, String>> IA = new ArrayList<>();
+    private String[] listingJudges = new String[0];
+    private String[] judgements = new String[0];
+    private String[] history = new String[0];
+    private String[] taggedMatters = new String[0];
+    private String[] caveats = new String[0];
+    private String listingDateSource = "";
+    private String listingRoom = "";
+    private String caseNoString = "";
+    private String[] listingAdvocates = new String[0];
+    private LinkedHashMap<String, String> listing = new LinkedHashMap<>();
+    private String[] causeLists = new String[0];
+    private LinkedHashMap<String, String> statusGroup = new LinkedHashMap<>();
+    private String lastUpdated = "";
+
+    public String getIndex() {
+        return index;
+    }
+
+    public void setIndex(String index) {
+        this.index = index;
+    }
 
     public String getTitle() {
         return title;
@@ -94,19 +103,19 @@ public class JsonBodyOutput {
         this.courtNo = courtNo;
     }
 
-    public String getPetitioners() {
+    public String[] getPetitioners() {
         return petitioners;
     }
 
-    public void setPetitioners(String petitioners) {
+    public void setPetitioners(String[] petitioners) {
         this.petitioners = petitioners;
     }
 
-    public String getRespondents() {
+    public String[] getRespondents() {
         return respondents;
     }
 
-    public void setRespondents(String respondents) {
+    public void setRespondents(String[] respondents) {
         this.respondents = respondents;
     }
 
@@ -126,19 +135,27 @@ public class JsonBodyOutput {
         this.radvocates = radvocates;
     }
 
-    public ArrayList<Map<String, Object>> getOrders() {
+    public ArrayList<LinkedHashMap<String, String>> getOrders() {
         return orders;
     }
 
-    public void setOrders(ArrayList<Map<String, Object>> orders) {
+    public void setOrders(ArrayList<LinkedHashMap<String, String>> orders) {
         this.orders = orders;
     }
 
-    public ArrayList<Map<String, Object>> getListingDates() {
+    public ArrayList<LinkedHashMap<String, String>> getProcess() {
+        return process;
+    }
+
+    public void setProcess(ArrayList<LinkedHashMap<String, String>> process) {
+        this.process = process;
+    }
+
+    public ArrayList<LinkedHashMap<String, String>> getListingDates() {
         return listingDates;
     }
 
-    public void setListingDates(ArrayList<Map<String, Object>> listingDates) {
+    public void setListingDates(ArrayList<LinkedHashMap<String, String>> listingDates) {
         this.listingDates = listingDates;
     }
 
@@ -254,11 +271,11 @@ public class JsonBodyOutput {
         this.file_year = file_year;
     }
 
-    public String[] getIA() {
+    public ArrayList<LinkedHashMap<String, String>> getIA() {
         return IA;
     }
 
-    public void setIA(String[] IA) {
+    public void setIA(ArrayList<LinkedHashMap<String, String>> IA) {
         this.IA = IA;
     }
 
@@ -334,11 +351,11 @@ public class JsonBodyOutput {
         this.listingAdvocates = listingAdvocates;
     }
 
-    public Map<String, Object> getListing() {
+    public LinkedHashMap<String, String> getListing() {
         return listing;
     }
 
-    public void setListing(Map<String, Object> listing) {
+    public void setListing(LinkedHashMap<String, String> listing) {
         this.listing = listing;
     }
 
@@ -350,11 +367,11 @@ public class JsonBodyOutput {
         this.causeLists = causeLists;
     }
 
-    public Map<String, Object> getStatusGroup() {
+    public LinkedHashMap<String, String> getStatusGroup() {
         return statusGroup;
     }
 
-    public void setStatusGroup(Map<String, Object> statusGroup) {
+    public void setStatusGroup(LinkedHashMap<String, String> statusGroup) {
         this.statusGroup = statusGroup;
     }
 
@@ -362,7 +379,7 @@ public class JsonBodyOutput {
         return lastUpdated;
     }
 
-    public void setLastUpdated(String lastUpdated) {
-        this.lastUpdated = lastUpdated;
+    public void setLastUpdated() {
+        this.lastUpdated = String.valueOf(java.time.Clock.systemUTC().instant());
     }
 }

@@ -1,10 +1,9 @@
 package com.example.seleniumdemo.jsoncompilation.jsonbody;
 
 import org.apache.commons.lang3.math.NumberUtils;
-
 import javax.validation.constraints.NotNull;
 
-public class JsonBodyInputCaseNumber {
+public class JsonBodyInputPartyName {
     @NotNull
     private String state_val;
     @NotNull
@@ -14,11 +13,11 @@ public class JsonBodyInputCaseNumber {
     @NotNull
     private String bench_val;
     @NotNull
-    private String ct;
-    @NotNull
-    private String cn;
+    private String name;
     @NotNull
     private String cy;
+    @NotNull
+    private String f;
     @NotNull
     private String recordsReturned;
     @NotNull
@@ -56,20 +55,12 @@ public class JsonBodyInputCaseNumber {
         this.bench_val = bench_val;
     }
 
-    public String getCt() {
-        return ct;
+    public String getName() {
+        return name;
     }
 
-    public void setCt(String ct) {
-        this.ct = ct;
-    }
-
-    public String getCn() {
-        return cn;
-    }
-
-    public void setCn(String cn) {
-        this.cn = cn;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getCy() {
@@ -78,6 +69,14 @@ public class JsonBodyInputCaseNumber {
 
     public void setCy(String cy) {
         this.cy = cy;
+    }
+
+    public String getF() {
+        return f;
+    }
+
+    public void setF(String f) {
+        this.f = f;
     }
 
     public int getRecordsReturned() {

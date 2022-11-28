@@ -1,106 +1,93 @@
 package com.example.seleniumdemo.jsoncompilation.jsonbody;
 
+
+import org.apache.commons.lang3.math.NumberUtils;
+
 import javax.validation.constraints.NotNull;
 
 public class JsonBodyInputAdvocateName {
     @NotNull
-    private String caseCode;
+    private String state_val;
     @NotNull
-    private String courtType;
+    private String district_val;
     @NotNull
-    private String searchBy;
+    private String courtComplexEstb;
     @NotNull
-    private String advocate;
+    private String bench_val;
     @NotNull
-    private String state;
+    private String name;
     @NotNull
-    private String barcode;
+    private String f;
     @NotNull
-    private String year;
+    private String recordsReturned;
     @NotNull
-    private String status;
-    @NotNull
-    private String calendar;
-    @NotNull
-    private int recordsReturned;
+    private String format = "0";
 
-    public String getCaseCode() {
-        return caseCode;
+    public String getState_val() {
+        return state_val;
     }
 
-    public void setCaseCode(String caseCode) {
-        this.caseCode = caseCode;
+    public void setState_val(String state_val) {
+        this.state_val = state_val;
     }
 
-    public String getCourtType() {
-        return courtType;
+    public String getDistrict_val() {
+        return district_val;
     }
 
-    public void setCourtType(String courtType) {
-        this.courtType = courtType;
+    public void setDistrict_val(String district_val) {
+        this.district_val = district_val;
     }
 
-    public String getSearchBy() {
-        return searchBy;
+    public String getCourtComplexEstb() {
+        return courtComplexEstb;
     }
 
-    public void setSearchBy(String searchBy) {
-        this.searchBy = searchBy;
+    public void setCourtComplexEstb(String courtComplexEstb) {
+        this.courtComplexEstb = courtComplexEstb;
     }
 
-    public String getAdvocate() {
-        return advocate;
+    public String getBench_val() {
+        return bench_val;
     }
 
-    public void setAdvocate(String advocate) {
-        this.advocate = advocate;
+    public void setBench_val(String bench_val) {
+        this.bench_val = bench_val;
     }
 
-    public String getState() {
-        return state;
+    public String getName() {
+        return name;
     }
 
-    public void setState(String state) {
-        this.state = state;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getBarcode() {
-        return barcode;
+    public String getF() {
+        return f;
     }
 
-    public void setBarcode(String barcode) {
-        this.barcode = barcode;
-    }
-
-    public String getYear() {
-        return year;
-    }
-
-    public void setYear(String year) {
-        this.year = year;
-    }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
-    public String getCalendar() {
-        return calendar;
-    }
-
-    public void setCalendar(String calendar) {
-        this.calendar = calendar;
+    public void setF(String f) {
+        this.f = f;
     }
 
     public int getRecordsReturned() {
-        return recordsReturned;
+        return Integer.parseInt(recordsReturned);
     }
 
-    public void setRecordsReturned(int recordsReturned) {
-        this.recordsReturned = recordsReturned;
+    public void setRecordsReturned(String recordsReturned) {
+        if (NumberUtils.isCreatable(recordsReturned)) {
+            if (Integer.parseInt(recordsReturned) == 0) this.recordsReturned = "999";
+            else this.recordsReturned = recordsReturned;
+        } else if (recordsReturned.trim().equalsIgnoreCase("")) this.recordsReturned = "999";
+        else this.recordsReturned = String.valueOf(1);
+    }
+
+    public String getFormat() {
+        return format;
+    }
+
+    public void setFormat(String format) {
+        this.format = format;
     }
 }

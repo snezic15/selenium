@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.example</groupId>
-	<artifactId>seleniumdemo</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<name>seleniumdemo</name>
+	<artifactId>eCourtDemo</artifactId>
+	<version>1.0</version>
+	<name>eCourtDemo</name>
 	<description>Spring Boot Selenium Demo Project</description>
 	<properties>
 		<java.version>1.8</java.version>
@@ -58,31 +58,37 @@
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
-			<version>4.5.0</version>
+			<version>4.6.0</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-api</artifactId>
-			<version>4.5.0</version>
+			<version>4.6.0</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-remote-driver</artifactId>
-			<version>4.5.0</version>
+			<version>4.6.0</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-chrome-driver</artifactId>
-			<version>4.5.0</version>
+			<version>4.6.0</version>
 		</dependency>
 
 		<dependency>
 			<groupId>io.github.bonigarcia</groupId>
 			<artifactId>webdrivermanager</artifactId>
-			<version>5.3.0</version>
+			<version>5.3.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>2.10</version>
 		</dependency>
 
 		<dependency>
@@ -92,23 +98,28 @@
 		</dependency>
 
 		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.12.0</version>
+		</dependency>
+
+		<dependency>
 			<groupId>net.sourceforge.tess4j</groupId>
 			<artifactId>tess4j</artifactId>
-			<version>4.5.4</version>
+			<version>5.4.0</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi</artifactId>
-			<version>4.1.2</version>
+			<version>5.2.2</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi-ooxml</artifactId>
-			<version>4.1.2</version>
+			<version>5.2.2</version>
 		</dependency>
-
 	</dependencies>
 
 	<build>

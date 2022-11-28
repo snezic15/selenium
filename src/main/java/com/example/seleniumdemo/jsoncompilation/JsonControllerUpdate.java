@@ -13,8 +13,8 @@ import java.util.ArrayList;
 import java.util.Map;
 
 @Controller
-public class JsonController {
-    @PostMapping("/caseNumber")
+public class JsonControllerUpdate {
+    @PostMapping("/caseNumberUpdate")
     @ResponseBody
     public ArrayList<Map<String, Object>> caseNumber(@Valid @RequestBody JsonBodyInputCaseNumber j) {
         ArrayList<Map<String, Object>> ret = new ArrayList<>();
@@ -30,13 +30,13 @@ public class JsonController {
                     String t;
 
                     if (j.getFormat().equalsIgnoreCase("0")) {
-                        JsonBodyOutput temp = d.casePage(i, false);
+                        JsonBodyOutput temp = d.casePage(i, true);
                         temp.setState_val(j.getState_val());
                         temp.setDistrict_val(j.getDistrict_val());
                         temp.setBench_val(j.getBench_val());
                         t = new Gson().toJson(temp);
                     } else {
-                        JsonBodyOutputAlt temp = d.casePageAlt(i, false);
+                        JsonBodyOutputAlt temp = d.casePageAlt(i, true);
                         temp.setInputs(new JSONObject(input).toMap());
                         t = new Gson().toJson(temp);
                     }
@@ -60,7 +60,7 @@ public class JsonController {
         return ret;
     }
 
-    @PostMapping("/partyName")
+    @PostMapping("/partyNameUpdate")
     @ResponseBody
     public ArrayList<Map<String, Object>> partyName(@Valid @RequestBody JsonBodyInputPartyName j) {
         ArrayList<Map<String, Object>> ret = new ArrayList<>();
@@ -76,13 +76,13 @@ public class JsonController {
                     String t;
 
                     if (j.getFormat().equalsIgnoreCase("0")) {
-                        JsonBodyOutput temp = d.casePage(i, false);
+                        JsonBodyOutput temp = d.casePage(i, true);
                         temp.setState_val(j.getState_val());
                         temp.setDistrict_val(j.getDistrict_val());
                         temp.setBench_val(j.getBench_val());
                         t = new Gson().toJson(temp);
                     } else {
-                        JsonBodyOutputAlt temp = d.casePageAlt(i, false);
+                        JsonBodyOutputAlt temp = d.casePageAlt(i, true);
                         temp.setInputs(new JSONObject(input).toMap());
                         t = new Gson().toJson(temp);
                     }
@@ -106,7 +106,7 @@ public class JsonController {
         return ret;
     }
 
-    @PostMapping("/advocateName")
+    @PostMapping("/advocateNameUpdate")
     @ResponseBody
     public ArrayList<Map<String, Object>> advocateName(@Valid @RequestBody JsonBodyInputAdvocateName j) {
         ArrayList<Map<String, Object>> ret = new ArrayList<>();
@@ -122,13 +122,13 @@ public class JsonController {
                     String t;
 
                     if (j.getFormat().equalsIgnoreCase("0")) {
-                        JsonBodyOutput temp = d.casePage(i, false);
+                        JsonBodyOutput temp = d.casePage(i, true);
                         temp.setState_val(j.getState_val());
                         temp.setDistrict_val(j.getDistrict_val());
                         temp.setBench_val(j.getBench_val());
                         t = new Gson().toJson(temp);
                     } else {
-                        JsonBodyOutputAlt temp = d.casePageAlt(i, false);
+                        JsonBodyOutputAlt temp = d.casePageAlt(i, true);
                         temp.setInputs(new JSONObject(input).toMap());
                         t = new Gson().toJson(temp);
                     }
@@ -152,7 +152,7 @@ public class JsonController {
         return ret;
     }
 
-    @PostMapping("/causeList")
+    @PostMapping("/causeListUpdate")
     @ResponseBody
     public ArrayList<Map<String, Object>> causeList(@Valid @RequestBody JsonBodyInputCauseList j) {
         ArrayList<Map<String, Object>> ret = new ArrayList<>();
@@ -168,13 +168,13 @@ public class JsonController {
                     String t;
 
                     if (j.getFormat().equalsIgnoreCase("0")) {
-                        JsonBodyOutput temp = d.casePageCauseList(i, false);
+                        JsonBodyOutput temp = d.casePageCauseList(i, true);
                         temp.setState_val(j.getState_val());
                         temp.setDistrict_val(j.getDistrict_val());
                         temp.setBench_val(j.getBench_val());
                         t = new Gson().toJson(temp);
                     } else {
-                        JsonBodyOutputAlt temp = d.casePageCauseListAlt(i, false);
+                        JsonBodyOutputAlt temp = d.casePageCauseListAlt(i, true);
                         temp.setInputs(new JSONObject(input).toMap());
                         t = new Gson().toJson(temp);
                     }
@@ -198,7 +198,7 @@ public class JsonController {
         return ret;
     }
 
-    @PostMapping("/cnrNumber")
+    @PostMapping("/cnrNumberUpdate")
     @ResponseBody
     public Map<String, Object> cnrNumber(@Valid @RequestBody JsonBodyInputCNRNumber j) {
         Map<String, Object> ret;
@@ -208,7 +208,7 @@ public class JsonController {
             eCourt ec = new eCourt("chrome");
 
             ec.search(j);
-            JsonBodyOutput temp = ec.casePage(false);
+            JsonBodyOutput temp = ec.casePage(true);
 
             String t = new Gson().toJson(temp);
             ret = new JSONObject(t).toMap();

@@ -1,6 +1,5 @@
 package com.example.seleniumdemo;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.openqa.selenium.By;
@@ -49,8 +48,6 @@ public class MainController {
 		res.setResponse(statusCode);
 
 		if (statusCode == 200) {
-
-			WebDriverManager.chromedriver().setup();
 			ChromeOptions options = new ChromeOptions();
 	//		options.setBinary("/app/.apt/usr/bin/google-chrome");
 
@@ -66,6 +63,29 @@ public class MainController {
 		} else res.setSuccess("Failure!");
 
 		System.out.println(res);
+
+		JSONObject j = new JSONObject();
+		j.put("Temp", jsonArray);
+
+		return j.toMap();
+	}
+
+	@GetMapping("/tess")
+	@ResponseBody
+	public Map<String, Object> tessTest() {
+		JSONArray jsonArray = new JSONArray();
+		ArrayList<ArrayList<String>> Exceldata = new ArrayList<>();
+		FetchData Fd = new FetchData();
+
+		try {
+			Fd.testCaseNo("Court Complex", "Nagpur, District Sessions Court III", "M.A.C.P.", "2015", 1, "14", Exceldata);
+			System.out.println("\n\nSuccess!!!\n\n\n");
+			System.out.println("\n\nS No." + FetchData.getSNo() + "\n\n\n");
+			System.out.println("\n\nPetitioner" + FetchData.getPetitioner_versus_Respondent() + "\n\n\n");
+			System.out.println("\n\nCase Type" + FetchData.getCaseType_CaseNumber_CaseYear() + "\n\n\n");
+		} catch (Exception e1) {
+			e1.printStackTrace();
+		}
 
 		JSONObject j = new JSONObject();
 		j.put("Temp", jsonArray);

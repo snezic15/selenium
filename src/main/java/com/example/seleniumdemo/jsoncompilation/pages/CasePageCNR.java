@@ -2,7 +2,7 @@ package com.example.seleniumdemo.jsoncompilation.pages;
 
 import org.openqa.selenium.By;
 
-public class SearchPageAdvocateName {
+public class CasePageCNR {
     public static final By courtComplex = By.xpath("//*[@id=\"radCourtComplex\"]");
     public static final By courtEstablishment = By.xpath("//*[@id=\"radCourtEst\"]");
     public static final By complexStatus = By.xpath(".//select[@name='court_complex_code']");

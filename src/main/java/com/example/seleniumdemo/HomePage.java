@@ -12,7 +12,7 @@ public class HomePage {
 	WebElement CaseType;
 	@FindBy(xpath = "//*[@id=\"block-block-8\"]/div[1]/div[1]/ul/li[1]/a")
 	WebElement CaseNo;
-	@FindBy(xpath = "//*[@i d='block-block-8']/div[1]/button[1]")
+	@FindBy(xpath = "//*[@id='block-block-8']/div[1]/button[1]")
 	WebElement CaseStatus;
 
 	public WebElement getCaseType() {

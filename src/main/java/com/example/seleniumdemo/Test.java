@@ -1,6 +1,5 @@
 package com.example.seleniumdemo;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.json.JSONArray;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -19,7 +18,6 @@ public class Test {
 
         URL url = new URL(res.getUrl());
 
-        WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
         //		options.setBinary("/app/.apt/usr/bin/google-chrome");
 
